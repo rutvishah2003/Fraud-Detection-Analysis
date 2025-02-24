@@ -9,24 +9,6 @@ This project focuses on detecting and analyzing fraudulent transactions in a fin
 
 ---
 
-## Project Structure
-The project is organized as follows:
-fraud-detection-analysis/
-├── data/
-│ ├── fraud_analysis_dataset.csv # Raw dataset
-│ └── processed_data.csv # Processed dataset
-├── notebooks/
-│ ├── data_preprocessing.ipynb # Data cleaning and feature engineering
-│ ├── exploratory_data_analysis.ipynb # EDA and insights
-│ └── model_training.ipynb # Machine learning model development
-├── dashboard/
-│ └── fraud_detection_dashboard.pbix # Power BI dashboard
-├── README.md # Project documentation
-└── requirements.txt # Python dependencies
-
-
----
-
 ## Dataset
 The dataset used in this project contains the following columns:
 - `step`: Represents a unit of time (e.g., hour, day).
@@ -44,25 +26,53 @@ The dataset used in this project contains the following columns:
 
 ## Steps in the Project
 
-### 1. Data Preprocessing
-- **Handling Missing Values**: The dataset was checked for missing values, and no missing values were found.
-- **Feature Engineering**:
-  - Created new features like `balanceOrig_diff` (difference between old and new balances for the origin account).
-  - Encoded categorical variables (e.g., `type`).
-  - Dropped unnecessary columns (e.g., `nameOrig`, `nameDest`).
+### 1. Data Loading
+- Load the dataset into a Pandas DataFrame.
+- Display the first few rows to understand its structure.
 
-### 2. Exploratory Data Analysis (EDA)
-- Analyzed the distribution of fraudulent vs non-fraudulent transactions.
-- Identified high-risk transaction types (e.g., CASH_OUT, TRANSFER).
-- Visualized trends in fraudulent transactions over time.
+### 2. Data Exploration
+- Check for missing values and data types.
+- Identify unique transaction types and class distributions.
 
-### 3. Machine Learning Model Development
+### 3. Exploratory Data Analysis (EDA) and Visualization
+- Analyze the distribution of fraudulent vs non-fraudulent transactions.
+- Identify high-risk transaction types (e.g., CASH_OUT, TRANSFER).
+- Visualize trends in fraudulent transactions over time.
+- Generate correlation heatmaps to understand relationships between features.
+
+### 4. Feature Engineering
+- Create new features such as `balanceOrig_diff` (difference between old and new balances for the origin account).
+- Encode categorical variables (e.g., `type`).
+- Drop unnecessary columns (e.g., `nameOrig`, `nameDest`).
+
+### 5. Data Preprocessing and Model Training
 - Split the data into training and testing sets.
-- Applied **SMOTE** to handle class imbalance.
-- Trained a **Random Forest Classifier** to predict fraudulent transactions.
-- Evaluated the model using metrics like accuracy, precision, recall, and F1-score.
+- Apply **SMOTE** to handle class imbalance.
+- Train machine learning models, including:
+  - Random Forest Classifier
+  - XGBoost
+  - Logistic Regression
+  - SVM (Support Vector Machine)
+- Perform hyperparameter tuning for optimal performance.
 
-### 4. Power BI Dashboard
+### 6. Model Evaluation
+- Evaluate models using the following metrics:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-score
+  - ROC Curve
+- Analyze false positives and false negatives.
+
+### 7. Financial Impact Analysis
+- **Key Questions Addressed**:
+  1. What is the model's precision and accuracy in detecting fraudulent transactions?
+  2. How reliable is the model in classifying transactions as legitimate or fraudulent?
+  3. What are the potential losses due to model errors?
+     - Analyze false negatives (missed fraud cases) and estimate the financial loss.
+     - Evaluate false positives (legitimate transactions incorrectly flagged as fraud) and their impact on user experience.
+
+### 8. Power BI Dashboard
 - Created an interactive dashboard to visualize key insights:
   - Fraud by transaction type.
   - Fraudulent transactions over time.
@@ -72,7 +82,6 @@ The dataset used in this project contains the following columns:
 ---
 
 ## Tools and Technologies
-- **Python**: For data preprocessing, EDA, and model training.
 - **Jupyter Notebook**: For exploratory analysis and model development.
 - **Power BI**: For creating the interactive dashboard.
 - **GitHub**: For version control and project sharing.
@@ -86,4 +95,5 @@ The dataset used in this project contains the following columns:
 git clone https://github.com/your-username/fraud-detection-analysis.git
 cd fraud-detection-analysis
 
-pip install -r requirements.txt
+### 2. Set Up the Environment
+
