@@ -87,10 +87,3 @@ The dataset used in this project contains the following columns:
 - **GitHub**: For version control and project sharing.
 
 ---
-### 2. Set Up the Environment
-Install the required Python libraries:
-
-```bash
-pip install -r requirements.txt
-
-
