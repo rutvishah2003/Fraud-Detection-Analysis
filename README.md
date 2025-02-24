@@ -93,7 +93,14 @@ The dataset used in this project contains the following columns:
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/your-username/fraud-detection-analysis.git
-cd fraud-detection-analysis```
+cd fraud-detection-analysis
+
+pip install -r requirements.txt
 
 ### 2. Set Up the Environment
+Install the required Python libraries:
+
+```bash
+pip install -r requirements.txt
+
 
