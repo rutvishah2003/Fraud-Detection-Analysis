@@ -4,3 +4,4 @@ numpy
 joblib
 scikit-learn
 matplotlib
+scikit-learn==1.5.2
