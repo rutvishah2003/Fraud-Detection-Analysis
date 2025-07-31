@@ -1,5 +1,10 @@
-# Fraud Detection Analysis Project
+# 💳 Fraud Detection Analysis Project
 
+🚀 **Live Demo**: [Click here to try the Streamlit App](https://rutvishah2003-fraud-detection-analysis-streamlit-chatbot-wr99ah.streamlit.app/)
+
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20App-brightgreen?logo=streamlit)](https://rutvishah2003-fraud-detection-analysis-streamlit-chatbot-wr99ah.streamlit.app/)
+
+---
 ## Overview
 This project focuses on detecting and analyzing fraudulent transactions in a financial dataset. The goal is to identify patterns, trends, and key insights related to fraudulent activities using **data analysis** and **visualization tools**. The project includes:
 - Data preprocessing and feature engineering.
